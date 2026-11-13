@@ -1,0 +1,8 @@
+# $Id: Makefile.in,v 1.1 2002-07-30 14:50:50 LanceSc Exp $
+
+LTLIBRARY_NAME        = libadvantage.la
+LTLIBRARY_SOURCES     = php_ads.c
+LTLIBRARY_SHARED_NAME = advantage.la
+LTLIBRARY_SHARED_LIBADD  = $(ADVANTAGE_LFLAGS) $(ADVANTAGE_SHARED_LIBADD)
+
+include $(top_srcdir)/build/dynlib.mk

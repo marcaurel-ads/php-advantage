@@ -1,0 +1,13 @@
+// $Id: config.w32,v 1.2 2006-02-22 10:27:34 LanceSc Exp $
+// vim:ft=javascript
+
+ARG_WITH("advantage", "Advantage support", "no");
+
+if (PHP_ADVANTAGE != "no") {
+        EXTENSION("advantage", "php_ads.c");
+        AC_DEFINE("HAVE_ADVANTAGE", 1, "Advantage support");
+        ADD_FLAG('CFLAGS_BD_EXT_ADVANTAGE', '/MT');
+        ADD_FLAG('LIBS_ADVANTAGE', 'adsodbc.lib odbc32.lib odbccp32.lib');
+}
+
+
